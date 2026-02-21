@@ -76,7 +76,7 @@ opt.number = true -- Print line number
 opt.pumblend = 10 -- Popup blend
 opt.pumheight = 10 -- Maximum number of entries in a popup
 opt.ruler = false -- Disable the default ruler
-opt.scrolloff = 4 -- Lines of context
+opt.scrolloff = 6 -- Lines of context
 opt.sessionoptions = { "buffers", "curdir", "tabpages", "winsize", "help", "globals", "skiprtp", "folds" }
 opt.shiftround = true -- Round indent
 opt.shiftwidth = 2 -- Size of an indent
@@ -100,15 +100,11 @@ opt.virtualedit = "block"
 opt.wildmode = "longest:full,full" -- Command-line completion mode
 opt.winminwidth = 5 -- Minimum window width
 opt.wrap = false -- Disable line wrap
-
-if vim.fn.has("nvim-0.10") == 1 then
-	opt.smoothscroll = true
-	opt.foldmethod = "expr"
-	opt.foldtext = ""
-else
-	opt.foldmethod = "indent"
-	opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
-end
+opt.smoothscroll = true
+opt.foldmethod = "expr"
+opt.foldtext = ""
+opt.foldmethod = "indent"
+opt.foldtext = "v:lua.require'lazyvim.util'.ui.foldtext()"
 
 -- Fix markdown indentation settings
 vim.g.markdown_recommended_style = 0
