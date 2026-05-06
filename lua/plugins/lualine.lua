@@ -10,7 +10,7 @@ return {
 			vim.o.laststatus = vim.g.lualine_laststatus
 
 			local colors = {
-				bg = "#1f2329",
+				bg = "0e1018",
 				fg = "#abb2bf",
 				yellow = "#e5c07b",
 				cyan = "#56b6c2",

@@ -35,8 +35,7 @@ return {
 			-- Be aware that you also will need to properly configure your LSP server to
 			-- provide the inlay hints.
 			inlay_hints = {
-				enabled = true,
-				exclude = { "vue" }, -- filetypes for which you don't want to enable inlay hints
+				enabled = false,
 			},
 			-- Enable this to enable the builtin LSP code lenses on Neovim.
 			-- Be aware that you also will need to properly configure your LSP server to
@@ -96,6 +95,17 @@ return {
 							desc = "Next Reference", enabled = function() return Snacks.words.is_enabled() end },
 						{ "<a-p>", function() Snacks.words.jump(-vim.v.count1, true) end, has = "documentHighlight",
 							desc = "Prev Reference", enabled = function() return Snacks.words.is_enabled() end },
+					},
+				},
+
+				tsgo = {
+					filetypes = {
+						"javascript",
+						"javascriptreact",
+						"javascript.jsx",
+						"typescript",
+						"typescriptreact",
+						"typescript.tsx",
 					},
 				},
 
