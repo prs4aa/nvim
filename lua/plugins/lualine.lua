@@ -63,7 +63,7 @@ return {
 						},
 						{
 							function()
-								return "󰅶"
+								return "󰄛"
 							end,
 							color = function()
 								local mode_color = {
@@ -134,11 +134,6 @@ return {
 								removed = { fg = colors.red },
 							},
 							cond = conditions.hide_in_width,
-						},
-						{
-							function()
-								return " " .. os.date("%R")
-							end,
 						},
 					},
 				},
